@@ -33,7 +33,7 @@ find_image_path <- function(time, folder, clock, path = NULL, github=TRUE) {
     file_path <- res[found_idx]
   } else {
 
-    if (length(times) < 1000) error(sprintf("Image for time  '%s' not found", time))
+    if (length(times) < 1000) stop(sprintf("Image for time  '%s' not found", time))
     file_path <- res[which.min(abs(lubridate::seconds(diff_time)))]
     warning(sprintf("Image for time  '%s' not found (in first 1000 images). Closest time is shown, it's %d seconds away. \nRepo uses format:\n%s", time, min(abs(lubridate::seconds(diff_time))), paste(basename(res[1:5]), collapse=" \n")))
   }

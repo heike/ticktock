@@ -22,8 +22,10 @@ Get an image path from a clock
 \examples{
 # example code
 
-im <- get_image("omni/clock2019-10-16_18/clock2019-10-16_18.59.59.jpg", "heike/ticktock-images", TRUE)
-imager::plot(im)
-im <- get_image("omni/clock2019-10-16_18/clock2019-10-16_18.29.15.jpg", "heike/ticktock-images", TRUE)
-imager::plot(im)
+im <- get_image("omni/clock2019-10-16_18/clock2019-10-16_18.59.59.jpg",
+"heike/ticktock-images", TRUE)
+plot(im)
+im <- get_image("omni/clock2019-10-16_18/clock2019-10-16_18.29.15.jpg",
+"heike/ticktock-images", TRUE)
+plot(im)
 }

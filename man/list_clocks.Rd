@@ -12,7 +12,7 @@ list_clocks(path, github = TRUE)
 \item{github}{binary value; true if the give path points to a github repository}
 }
 \value{
-vector of available clock recordings
+vector of available clock recordings with an attribute of the successful path
 }
 \description{
 Get a list of all available recordings by clock

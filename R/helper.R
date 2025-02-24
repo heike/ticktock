@@ -65,7 +65,10 @@ download_image_file <- function(path, folder="", github=TRUE) {
 #    download.file(img_file, destfile = tmp)
 
 #    browser()
-    return(imager::load.image(res))
+    im <- try({
+      imager::load.image(res)
+    }, silent = TRUE)
+    return(im)
 
   } else {
     stopifnot(dir.exists(path))

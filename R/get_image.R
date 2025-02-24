@@ -20,8 +20,15 @@
 #' plot(im)
 get_image <- function(path, repo = NULL, github=TRUE) {
   # make sure the image exists at the specified path
-  res <- list_image_files(folder=path, path=repo, github=TRUE)
-  "omni/clock2019-10-16_18/clock2019-10-16_18.32.18.jpg"
+  res <- try({
+    suppressWarnings(list_image_files(folder=path, path=repo, github=TRUE))
+  }, silent=TRUE)
+
+  if ("try-error" %in% class(res)) {
+    stop(res[1])
+  }
+
   im <- download_image_file(folder=path, path = repo)
 
 }
+

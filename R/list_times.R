@@ -15,6 +15,7 @@
 list_times <- function(clock, path = NULL, github=TRUE) {
   if (is.null(path)) path <- attr(clock, "path")
   res <- list_folder(path = path, folder = clock, github = github)
-
+  attr(res, "path") <- "path"
+  attr(res, "folder") <- res[1]
   return(res)
 }

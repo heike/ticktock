@@ -4,7 +4,7 @@
 \alias{list_times}
 \title{Get a list of all available times for a clock}
 \usage{
-list_times(clock, path, github = TRUE)
+list_times(clock, path = NULL, github = TRUE)
 }
 \arguments{
 \item{clock}{character string. For which clock is additional information required?}
@@ -21,5 +21,6 @@ Using the output from \code{list_clocks}, find the available times for a clock.
 }
 \examples{
 # example code
+list_times("omni", "heike/ticktock-images", TRUE)
 list_times(list_clocks("heike/ticktock-images"))
 }

@@ -11,7 +11,7 @@
 #' @examples
 #' # example code
 #' list_times("omni", "heike/ticktock-images", TRUE)
-#' list_times(list_clocks("heike/ticktock-images"), TRUE)
+#' list_times(list_clocks("heike/ticktock-images"))
 list_times <- function(clock, path = NULL, github=TRUE) {
   if (is.null(path)) path <- attr(clock, "path")
   res <- list_folder(path = path, folder = clock, github = github)
